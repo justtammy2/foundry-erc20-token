@@ -1,66 +1,56 @@
-## Foundry
+BardToken
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A simple ERC-20 token built with **Solidity**, **Foundry**, and **OpenZeppelin**.  
+This project demonstrates writing, testing, and deploying a token contract using the Foundry toolchain.
 
-Foundry consists of:
+---
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Features
 
-## Documentation
+- ERC-20 standard token
+- Owner-controlled minting
+- Token burning support
+- Automated tests using Foundry
+- Deployment script included
 
-https://book.getfoundry.sh/
+---
 
-## Usage
+## Tech Stack
 
-### Build
+- Solidity
+- Foundry
+- OpenZeppelin Contracts
+- Anvil (local Ethereum node)
 
-```shell
-$ forge build
-```
+---
 
-### Test
+## Project Structure
 
-```shell
-$ forge test
-```
+foundry-erc20-token
+├── src/
+│ └── BardToken.sol
+├── test/
+│ └── BardTokenTest.t.sol
+├── script/
+│ └── DeployBardToken.s.sol
+├── foundry.toml
+└── README.md
 
-### Format
+---
 
-```shell
-$ forge fmt
-```
+## Installation
 
-### Gas Snapshots
+Clone the repository:
 
-```shell
-$ forge snapshot
-```
+```bash
+git clone https://github.com/YOUR_USERNAME/foundry-erc20-token.git
+cd foundry-erc20-token
 
-### Anvil
+Install dependencies:
 
-```shell
-$ anvil
-```
+forge install
 
-### Deploy
+Build the project:
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+forge build
 ```
